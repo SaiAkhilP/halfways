@@ -25,6 +25,10 @@ mongoose.connect(
   }
 );
 
+app.get('/', (req,res)=>{
+  res.status(200).send('Hello!')
+})
+
 //to insert new restaurant
 app.post("/restaurant", controller.createRest);
 
